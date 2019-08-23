@@ -1,0 +1,22 @@
+{
+    "valid":{
+        "path": ["individuals", "P001"],
+        "user": "alice",
+        "method": "GET",
+        "token": {"payload":{"researcher":true, "entitlements": ["Primary", "SecondaryA"]}}
+    },
+
+    "notaresearcher":{
+        "path": ["individuals", "P001"],
+        "user": "alice",
+        "method": "GET",
+        "token": {"payload":{"researcher":false, "entitlements": ["Primary", "SecondaryA"]}}
+    },
+
+    "noentitlements":{
+        "path": ["individuals", "P001"],
+        "user": "alice",
+        "method": "GET",
+        "token": {"payload":{"researcher":true, "entitlements": []}}
+    }
+}
